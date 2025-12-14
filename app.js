@@ -686,6 +686,8 @@ class App extends EventEmitter {
     } else {
       self.spa.setTempRange("HIGH" === payload);
     }
+    // republishes the discovery config with new min/max
+    self.climateDiscovery(self.spa);
   }
 
   setTemp(payload) {
