@@ -682,7 +682,7 @@ class App extends EventEmitter {
 
   setTempRange(payload) {
     let self = this;
-    self.spa.toggleTempRange(payload);
+    self.spa.setTempRange(payload);
     // republishes the discovery config with new min/max
     self.climateDiscovery(self.spa);
   }
